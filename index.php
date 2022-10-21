@@ -64,7 +64,7 @@ include('includes/header.php');
 <h2><?php echo $category_name; ?></h2>
 <table>
 <tr>
-<th>Images</th>
+<th>Image</th>
 <th>Name</th>
 <th>Price</th>
 <th>Colour</th>
