@@ -31,7 +31,7 @@ $statement2->closeCursor();
 // Get pets for selected category
 $queryRecords = "SELECT * FROM pets
 WHERE categoryID = :category_id
-ORDER BY recordID";
+ORDER BY petID";
 $statement3 = $db->prepare($queryRecords);
 $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
