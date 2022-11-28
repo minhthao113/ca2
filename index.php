@@ -64,19 +64,25 @@ include('includes/header.php');
 <h2><?php echo $category_name; ?></h2>
 <table>
 <tr>
-<th>Image</th>
+<!--<th>Image</th>-->
 <th>Name</th>
-<th>Price</th>
-<th>Colour</th>
+<th>Note (optional)</th>
+<th>Type</th>
+<th>Due date</th>
+<th>Submit date</th>
+<th>Grade</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
 <?php foreach ($pets as $pet) : ?>
 <tr>
-<td><img src="image_uploads/<?php echo $pet['image']; ?>" width="100px" height="100px" /></td>
+<!--<td><img src="image_uploads/<?php echo $pet['image']; ?>" width="100px" height="100px" /></td>-->
 <td><?php echo $pet['name']; ?></td>
-<td><?php echo $pet['price']; ?></td>
-<td><?php echo $pet['colour']; ?></td>
+<td><?php echo $pet['note']; ?></td>
+<td><?php echo $pet['type']; ?></td>
+<td><?php echo $pet['due_date']; ?></td>
+<td><?php echo $pet['submit_date']; ?></td>
+<td><?php echo $pet['grade']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="pet_id"
