@@ -26,6 +26,7 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
+            
             <label>Name:</label>
             <input type="input" name="name">
             <br>

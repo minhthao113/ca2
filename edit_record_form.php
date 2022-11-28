@@ -46,6 +46,7 @@ include('includes/header.php');
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>            
+            
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
             <?php } ?>
