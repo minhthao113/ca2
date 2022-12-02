@@ -1,7 +1,7 @@
 <?php
 
 // Get the product data
-$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
+$module_id = filter_input(INPUT_POST, 'module_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $note = filter_input(INPUT_POST, 'note');
 $type = filter_input(INPUT_POST, 'type');
@@ -10,7 +10,7 @@ $submit_date = filter_input(INPUT_POST, 'submit_date');
 $grade = filter_input(INPUT_POST, 'grade', FILTER_VALIDATE_FLOAT);
 
 // Validate inputs
-if ($category_id == null || $category_id == false ||
+if ($module_id == null || $module_id == false ||
     $name == null || $note == null || $type == null || $due_date == null || $submit_date == null || $grade == null || $grade == false ) {
     $error = "Invalid assigment data. Check all fields and try again.";
     include('error.php');
@@ -61,18 +61,18 @@ if ($category_id == null || $category_id == false ||
         }
     }
     */
-    
+
     /************************** End Image upload **************************/
     
     require_once('database.php');
 
     // Add the product to the database 
     $query = "INSERT INTO assignments
-                 (categoryID, name, note, type, due_date, submit_date, grade)
+                 (moduleID, name, note, type, due_date, submit_date, grade)
               VALUES
-                 (:category_id, :name, :note, :type, :due_date, :submit_date, :grade)";
+                 (:module_id, :name, :note, :type, :due_date, :submit_date, :grade)";
     $statement = $db->prepare($query);
-    $statement->bindValue(':category_id', $category_id);
+    $statement->bindValue(':module_id', $module_id);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':note', $note);
     $statement->bindValue(':type', $type);
