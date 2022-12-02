@@ -1,39 +1,39 @@
 <?php
 require_once('database.php');
 
-// Get category ID
-if (!isset($category_id)) {
-$category_id = filter_input(INPUT_GET, 'category_id', 
+// Get module ID
+if (!isset($module_id)) {
+$module_id = filter_input(INPUT_GET, 'module_id', 
 FILTER_VALIDATE_INT);
-if ($category_id == NULL || $category_id == FALSE) {
-$category_id = 1;
+if ($module_id == NULL || $module_id == FALSE) {
+$module_id = 1;
 }
 }
 
-// Get name for current category
-$queryCategory = "SELECT * FROM categories
-WHERE categoryID = :category_id";
+// Get name for current module
+$queryCategory = "SELECT * FROM modules
+WHERE moduleID = :module_id";
 $statement1 = $db->prepare($queryCategory);
-$statement1->bindValue(':category_id', $category_id);
+$statement1->bindValue(':module_id', $module_id);
 $statement1->execute();
-$category = $statement1->fetch();
+$module = $statement1->fetch();
 $statement1->closeCursor();
-$category_name = $category['categoryName'];
+$module_name = $module['moduleName'];
 
-// Get all categories
-$queryAllCategories = 'SELECT * FROM categories
-ORDER BY categoryID';
+// Get all modules
+$queryAllCategories = 'SELECT * FROM modules
+ORDER BY moduleID';
 $statement2 = $db->prepare($queryAllCategories);
 $statement2->execute();
-$categories = $statement2->fetchAll();
+$modules = $statement2->fetchAll();
 $statement2->closeCursor();
 
-// Get assignments for selected category
+// Get assignments for selected module
 $queryRecords = "SELECT * FROM assignments
-WHERE categoryID = :category_id
+WHERE moduleID = :module_id
 ORDER BY assignmentID";
 $statement3 = $db->prepare($queryRecords);
-$statement3->bindValue(':category_id', $category_id);
+$statement3->bindValue(':module_id', $module_id);
 $statement3->execute();
 $assignments = $statement3->fetchAll();
 $statement3->closeCursor();
@@ -45,13 +45,13 @@ include('includes/header.php');
 <h1>Assignment List</h1>
 
 <aside>
-<!-- display a list of categories -->
+<!-- display a list of modules -->
 <h2>Modules</h2>
 <nav>
 <ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
+<?php foreach ($modules as $module) : ?>
+<li><a href=".?module_id=<?php echo $module['moduleID']; ?>">
+<?php echo $module['moduleName']; ?>
 </a>
 </li>
 <?php endforeach; ?>
@@ -61,7 +61,7 @@ include('includes/header.php');
 
 <section>
 <!-- display a table of assignments -->
-<h2><?php echo $category_name; ?></h2>
+<h2><?php echo $module_name; ?></h2>
 <table>
 <tr>
 <!--<th>Image</th>-->
@@ -87,23 +87,23 @@ include('includes/header.php');
 id="delete_assignment_form">
 <input type="hidden" name="assignment_id"
 value="<?php echo $assignment['assignmentID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $assignment['categoryID']; ?>">
+<input type="hidden" name="module_id"
+value="<?php echo $assignment['moduleID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_assignment_form.php" method="post"
 id="delete_assignment_form">
 <input type="hidden" name="assignment_id"
 value="<?php echo $assignment['assignmentID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $assignment['categoryID']; ?>">
+<input type="hidden" name="module_id"
+value="<?php echo $assignment['moduleID']; ?>">
 <input type="submit" value="Edit">
 </form></td>
 </tr>
 <?php endforeach; ?>
 </table>
 <p><a href="add_assignment_form.php">Add Assignment</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
+<p><a href="module_list.php">Manage modules</a></p>
 </section>
 <?php
 include('includes/footer.php');
