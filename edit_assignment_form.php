@@ -11,6 +11,18 @@ $statement->execute();
 $assignments = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
 ?>
+
+<?php
+require('database.php');
+$query = 'SELECT *
+          FROM categories
+          ORDER BY categoryID';
+$statement = $db->prepare($query);
+$statement->execute();
+$categories = $statement->fetchAll();
+$statement->closeCursor();
+?>
+
 <!-- the head section -->
  <div class="container">
 <?php
@@ -23,9 +35,14 @@ include('includes/header.php');
             <input type="hidden" name="assignment_id"
                    value="<?php echo $assignments['assignmentID']; ?>">
 
-            <label>Category ID:</label>
-            <input type="category_id" name="category_id"
-                   value="<?php echo $assignments['categoryID']; ?>">
+             <label>Category:</label>
+            <select name="category_id">
+            <?php foreach ($categories as $category) : ?>
+                <option value="<?php echo $category['categoryID']; ?>">
+                    <?php echo $category['categoryName']; ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
             <br>
 
             <label>Name:</label>
@@ -53,13 +70,7 @@ include('includes/header.php');
             <input type="input" name="grade">
             <br>
 
-       <!-- <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
-            <br>          
-            
-            <?php if ($assignments['image'] != "") { ?>
-            <p><img src="image_uploads/<?php echo $assignments['image']; ?>" height="150" /></p>
-            <?php } ?> --> 
+
             
             <label>&nbsp;</label>
             <input type="submit" value="Save Changes">
