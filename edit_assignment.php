@@ -13,7 +13,7 @@ $grade = filter_input(INPUT_POST, 'grade', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($assignment_id == NULL || $assignment_id == FALSE || $module_id == NULL ||
 $module_id == FALSE || empty($name) ||
-$name == null || $note == null || $type == null || $due_date == null || $submit_date == null || $grade == null || $grade == false ) {
+$name == null || $note == null || $type == null || $due_date == null || $submit_date == null) {
 $error = "Invalid assignment data. Check all fields and try again.";
 include('error.php');
 } else {
@@ -62,7 +62,9 @@ type = :type,
 due_date = :due_date,
 submit_date = :submit_date,
 grade = :grade,
+
 WHERE assignmentID = :assignment_id';
+
 $statement = $db->prepare($query);
 $statement->bindValue(':module_id', $module_id);
 $statement->bindValue(':name', $name);
