@@ -51,26 +51,29 @@ include('includes/header.php');
             <br>
 
             <label>Note (optional):</label>
-            <input type="input" name="note">
+            <input type="input" name="note"
+                   value="<?php echo $assignments['note']; ?>">
             <br>        
 
             <label>Type:</label>
-            <input type="input" name="type">
+            <input type="input" name="type"
+                   value="<?php echo $assignments['type']; ?>"> 
             <br>  
 
-            <label>Due date</label>
-            <input type="date" name="due_date">
+            <label>Due date:</label>
+            <input type="date" name="due_date"
+            value="<?php echo $assignments['due_date']; ?>">
             <br>  
 
-            <label>Submit date</label>
-            <input type="date" name="submit_date">
+            <label>Submit date:</label>
+            <input type="date" name="submit_date"
+                   value="<?php echo $assignments['submit_date']; ?>">
             <br> 
             
-            <label>Grade</label>
-            <input type="input" name="grade">
+            <label>Grade (%):</label>
+            <input type="input" name="grade"
+                   value="<?php echo $assignments['grade']; ?>">
             <br>
-
-
             
             <label>&nbsp;</label>
             <input type="submit" value="Save Changes">

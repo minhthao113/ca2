@@ -39,15 +39,15 @@ include('includes/header.php');
             <input type="input" name="type">
             <br>  
 
-            <label>Due date</label>
+            <label>Due date:</label>
             <input type="date" name="due_date">
             <br>  
 
-            <label>Submit date</label>
+            <label>Submit date:</label>
             <input type="date" name="submit_date">
             <br> 
             
-            <label>Grade</label>
+            <label>Grade (%):</label>
             <input type="input" name="grade">
             <br>
             
