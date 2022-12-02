@@ -3,13 +3,16 @@
 // Get the product data
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
-$colour = filter_input(INPUT_POST, 'colour');
+$note = filter_input(INPUT_POST, 'note');
+$type = filter_input(INPUT_POST, 'type');
+$due_date = filter_input(INPUT_POST, 'due_date');
+$submit_date = filter_input(INPUT_POST, 'submit_date');
+$grade = filter_input(INPUT_POST, 'grade', FILTER_VALIDATE_FLOAT);
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-    $name == null || $price == null || $price == false || $colour == null ) {
-    $error = "Invalid product data. Check all fields and try again.";
+    $name == null || $note == null || $type == null || $due_date == null || $submit_date == null || $grade == null || $grade == false ) {
+    $error = "Invalid assigment data. Check all fields and try again.";
     include('error.php');
     exit();
 } else {
@@ -20,7 +23,7 @@ if ($category_id == null || $category_id == false ||
 
 // avoid notice
 
-    $imgFile = $_FILES['image']['name'];
+/*    $imgFile = $_FILES['image']['name'];
     $tmp_dir = $_FILES['image']['tmp_name'];
     echo $_FILES['image']['tmp_name'];
     $imgSize = $_FILES['image']['size'];
@@ -57,7 +60,8 @@ if ($category_id == null || $category_id == false ||
             exit();
         }
     }
-
+    */
+    
     /************************** End Image upload **************************/
     
     require_once('database.php');

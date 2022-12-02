@@ -46,7 +46,7 @@ include('includes/header.php');
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
+<h2>Modules</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -84,15 +84,15 @@ include('includes/header.php');
 <td><?php echo $assignment['submit_date']; ?></td>
 <td><?php echo $assignment['grade']; ?></td>
 <td><form action="delete_assignment.php" method="post"
-id="delete_record_form">
+id="delete_assignment_form">
 <input type="hidden" name="assignment_id"
 value="<?php echo $assignment['assignmentID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $assignment['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
+<td><form action="edit_assignment_form.php" method="post"
+id="delete_assignment_form">
 <input type="hidden" name="assignment_id"
 value="<?php echo $assignment['assignmentID']; ?>">
 <input type="hidden" name="category_id"
