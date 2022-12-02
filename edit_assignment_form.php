@@ -15,11 +15,11 @@ $statement->closeCursor();
 <?php
 require('database.php');
 $query = 'SELECT *
-          FROM categories
-          ORDER BY categoryID';
+          FROM modules
+          ORDER BY moduleID';
 $statement = $db->prepare($query);
 $statement->execute();
-$categories = $statement->fetchAll();
+$modules = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 
@@ -35,11 +35,11 @@ include('includes/header.php');
             <input type="hidden" name="assignment_id"
                    value="<?php echo $assignments['assignmentID']; ?>">
 
-             <label>Category:</label>
-            <select name="category_id">
-            <?php foreach ($categories as $category) : ?>
-                <option value="<?php echo $category['categoryID']; ?>">
-                    <?php echo $category['categoryName']; ?>
+             <label>Module:</label>
+            <select name="module_id">
+            <?php foreach ($modules as $module) : ?>
+                <option value="<?php echo $module['moduleID']; ?>">
+                    <?php echo $module['moduleName']; ?>
                 </option>
             <?php endforeach; ?>
             </select>
