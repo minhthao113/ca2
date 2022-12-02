@@ -83,7 +83,7 @@ include('includes/header.php');
 <td><?php echo $assignment['due_date']; ?></td>
 <td><?php echo $assignment['submit_date']; ?></td>
 <td><?php echo $assignment['grade']; ?></td>
-<td><form action="delete_record.php" method="post"
+<td><form action="delete_assignment.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="assignment_id"
 value="<?php echo $assignment['assignmentID']; ?>">
@@ -102,7 +102,7 @@ value="<?php echo $assignment['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
+<p><a href="add_assignment_form.php">Add Assignment</a></p>
 <p><a href="category_list.php">Manage Categories</a></p>
 </section>
 <?php
