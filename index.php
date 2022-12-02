@@ -28,21 +28,21 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 
-// Get pets for selected category
-$queryRecords = "SELECT * FROM pets
+// Get assignments for selected category
+$queryRecords = "SELECT * FROM assignments
 WHERE categoryID = :category_id
-ORDER BY petID";
+ORDER BY assignmentID";
 $statement3 = $db->prepare($queryRecords);
 $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
-$pets = $statement3->fetchAll();
+$assignments = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
 <div class="container">
 <?php
 include('includes/header.php');
 ?>
-<h1>Pet List</h1>
+<h1>Assignment List</h1>
 
 <aside>
 <!-- display a list of categories -->
@@ -60,7 +60,7 @@ include('includes/header.php');
 </aside>
 
 <section>
-<!-- display a table of pets -->
+<!-- display a table of assignments -->
 <h2><?php echo $category_name; ?></h2>
 <table>
 <tr>
@@ -74,29 +74,29 @@ include('includes/header.php');
 <th>Delete</th>
 <th>Edit</th>
 </tr>
-<?php foreach ($pets as $pet) : ?>
+<?php foreach ($assignments as $assignment) : ?>
 <tr>
-<!--<td><img src="image_uploads/<?php echo $pet['image']; ?>" width="100px" height="100px" /></td>-->
-<td><?php echo $pet['name']; ?></td>
-<td><?php echo $pet['note']; ?></td>
-<td><?php echo $pet['type']; ?></td>
-<td><?php echo $pet['due_date']; ?></td>
-<td><?php echo $pet['submit_date']; ?></td>
-<td><?php echo $pet['grade']; ?></td>
+<!--<td><img src="image_uploads/<?php echo $assignment['image']; ?>" width="100px" height="100px" /></td>-->
+<td><?php echo $assignment['name']; ?></td>
+<td><?php echo $assignment['note']; ?></td>
+<td><?php echo $assignment['type']; ?></td>
+<td><?php echo $assignment['due_date']; ?></td>
+<td><?php echo $assignment['submit_date']; ?></td>
+<td><?php echo $assignment['grade']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
-<input type="hidden" name="pet_id"
-value="<?php echo $pet['petID']; ?>">
+<input type="hidden" name="assignment_id"
+value="<?php echo $assignment['assignmentID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $pet['categoryID']; ?>">
+value="<?php echo $assignment['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
-<input type="hidden" name="pet_id"
-value="<?php echo $pet['petID']; ?>">
+<input type="hidden" name="assignment_id"
+value="<?php echo $assignment['assignmentID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $pet['categoryID']; ?>">
+value="<?php echo $assignment['categoryID']; ?>">
 <input type="submit" value="Edit">
 </form></td>
 </tr>

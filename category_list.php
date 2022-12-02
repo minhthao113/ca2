@@ -14,12 +14,13 @@
 <?php
 include('includes/header.php');
 ?>
-    <h1>Category List</h1>
+    <h1>Module List</h1>
     <table>
         <tr>
             <th>Name</th>
-            <th>&nbsp;</th>
+            <th>Delete</th>
         </tr>
+
         <?php foreach ($categories as $category) : ?>
         <tr>
             <td><?php echo $category['categoryName']; ?></td>
@@ -36,7 +37,7 @@ include('includes/header.php');
     </table>
     <br>
 
-    <h2>Add Category</h2>
+    <h2>Add Module</h2>
     <form action="add_category.php" method="post"
           id="add_category_form">
 
