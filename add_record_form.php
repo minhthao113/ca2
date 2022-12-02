@@ -31,17 +31,29 @@ include('includes/header.php');
             <input type="input" name="name">
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price">
+            <label>Note (optional)</label>
+            <input type="input" name="note">
             <br>        
 
-            <label>Colour:</label>
-            <input type="input" name="colour">
+            <label>Type:</label>
+            <input type="input" name="type">
             <br>  
+
+            <label>Due date</label>
+            <input type="date" name="due_date">
+            <br>  
+
+            <label>Submit date</label>
+            <input type="date" name="submit_date">
+            <br> 
             
-            <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <label>Grade</label>
+            <input type="input" name="grade">
             <br>
+            
+            <!--<label>Image:</label>
+            <input type="file" name="image" accept="image/*" />
+            <br>-->
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Record">
