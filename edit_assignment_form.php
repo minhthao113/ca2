@@ -35,8 +35,9 @@ include('includes/header.php');
             <input type="hidden" name="assignment_id"
                    value="<?php echo $assignments['assignmentID']; ?>">
 
-             <label>Module:</label>
-            <select name="module_id">
+            <label>Module:</label>
+            <select name="module_id"
+                    value="<?php echo $assignments['name']; ?>">
             <?php foreach ($modules as $module) : ?>
                 <option value="<?php echo $module['moduleID']; ?>">
                     <?php echo $module['moduleName']; ?>

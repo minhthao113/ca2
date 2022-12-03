@@ -9,6 +9,8 @@ $type = filter_input(INPUT_POST, 'type');
 $due_date = filter_input(INPUT_POST, 'due_date');
 $submit_date = filter_input(INPUT_POST, 'submit_date');
 $grade = filter_input(INPUT_POST, 'grade', FILTER_VALIDATE_FLOAT);
+//print $submit_date;
+//die();
 
 // Validate inputs
 if ($assignment_id == NULL || $assignment_id == FALSE || $module_id == NULL ||
@@ -54,16 +56,16 @@ $image = $original_image; // old image from database
 // If valid, update the assignment in the database
 require_once('database.php');
 
-$query = 'UPDATE assignments
+$query = "UPDATE assignments
 SET moduleID = :module_id,
 name = :name,
 note = :note,
 type = :type,
 due_date = :due_date,
 submit_date = :submit_date,
-grade = :grade,
+grade = :grade
 
-WHERE assignmentID = :assignment_id';
+WHERE assignmentID = :assignment_id";
 
 $statement = $db->prepare($query);
 $statement->bindValue(':module_id', $module_id);
