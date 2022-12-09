@@ -31,13 +31,12 @@ include('includes/header.php');
         <h1>Edit Assignment</h1>
         <form action="edit_assignment.php" method="post" enctype="multipart/form-data"
               id="add_assignment_form">
-            <input type="hidden" name="original_image" value="<?php echo $assignments['image']; ?>" />
+            <!--<input type="hidden" name="original_image" value="<?php echo $assignments['image']; ?>" />-->
             <input type="hidden" name="assignment_id"
                    value="<?php echo $assignments['assignmentID']; ?>">
 
             <label>Module:</label>
-            <select name="module_id"
-                    value="<?php echo $assignments['name']; ?>">
+            <select name="module_id">
             <?php foreach ($modules as $module) : ?>
                 <option value="<?php echo $module['moduleID']; ?>">
                     <?php echo $module['moduleName']; ?>
