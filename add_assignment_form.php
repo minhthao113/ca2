@@ -20,6 +20,7 @@ include('includes/header.php');
             <label>Module:</label>
             <select name="module_id" required>
             <?php foreach ($modules as $module) : ?>
+                <option value="">None</option>
                 <option value="<?php echo $module['moduleID']; ?>">
                     <?php echo $module['moduleName']; ?>
                 </option>
