@@ -29,11 +29,11 @@ include('includes/header.php');
             <br>
             
             <label>Name:</label>
-            <input type="input" name="name" required>
+            <input type="input" name="name" placeholder="Enter assignment name" required>
             <br>
 
             <label>Note (optional):</label>
-            <input type="input" name="note">
+            <input type="input" name="note" placeholder="Enter assignment description">
             <br>        
 
             <label>Type:</label>
@@ -52,7 +52,7 @@ include('includes/header.php');
             <br> 
             
             <label>Grade (%):</label>
-            <input type="input" name="grade">
+            <input type="input" name="grade" placeholder="Enter a mark from 1 to 100">
             <br>
             
             <label>&nbsp;</label>
