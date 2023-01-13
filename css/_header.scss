@@ -1,1 +1,11 @@
-// Here is where the header styles start
+/*  Here are where the header styles start */
+
+header {
+    margin: 0;
+    border-bottom: 2px solid black;
+}
+header h1 {
+    margin: 0;
+    padding: .5em 0;
+    color: black;
+}

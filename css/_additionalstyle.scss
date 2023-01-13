@@ -1,0 +1,23 @@
+/* Additional styles for the Assignment Manager application */
+
+#add_assignment_form {
+    margin: .5em 0 1em;
+}
+#add_assignment_form label {
+    width: 6em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    float: left;
+}
+#add_assignment_form input {
+    float: left;
+}
+#add_assignment_form input[text] {
+    width: 15em;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
