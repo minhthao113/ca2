@@ -9,10 +9,13 @@ $modules = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 <!-- the head section -->
- <div class="container">
+
 <?php
 include('includes/header.php');
 ?>
+
+<div class="container">
+
         <h1>Add Assignment</h1>
         <form action="add_assignment.php" method="post" enctype="multipart/form-data"
               id="add_assignment_form">

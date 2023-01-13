@@ -10,10 +10,12 @@
     $statement->closeCursor();
 ?>
 <!-- the head section -->
-<div class="container">
 <?php
 include('includes/header.php');
 ?>
+
+<div class="container">
+
     <h1>Module List</h1>
     <table>
         <tr>
@@ -47,6 +49,6 @@ include('includes/header.php');
     </form>
     <br>
 
-    <?php
+<?php
 include('includes/footer.php');
 ?>

@@ -16,4 +16,5 @@ A starter project for DkIT students on the Server-Side module.
 * Add CSS folder, SCSS files and link them to main mystyle.scss
 * Copy style from main.css to the scss files
 * Use nesting and variables
-* Link Bootstrap
+* Link Bootstrap and Google Font
+* Change font, color
