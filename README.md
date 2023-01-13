@@ -7,4 +7,4 @@ A starter project for DkIT students on the Server-Side module.
 * Configure the database.php file to connect to your SQL database
 ### Changes made in PHP
 * Change "category" to "module" and "record" to "assignemnt" to fit the theme
-* Change input types in the form files
+* Change input types in the add and edit form files
