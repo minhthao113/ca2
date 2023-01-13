@@ -36,7 +36,7 @@ include('includes/header.php');
             <br>        
 
             <label>Type:</label>
-            <input type="input" name="type">
+            <input type="input" name="type" required>
             <br>  
 
             <label>Due date:</label>
