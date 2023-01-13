@@ -1,5 +1,5 @@
-<footer>
-    <p>&copy; <?php echo date("Y"); ?> My Assignment Management App, Inc.</p>
+<footer class="sticky-footer">
+    <p>&copy; <?php echo date("Y"); ?> School of Magic</p>
 </footer>
 </div><!-- close div container -->
 </body>
