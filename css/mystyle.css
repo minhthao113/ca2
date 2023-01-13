@@ -11,23 +11,29 @@ h2 {
   padding: .25em 0 .5em;
 }
 
-h1, h2 {
-  color: #333;
-}
-
 body {
   color: #111111 !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 aside a {
   color: white !important;
   font-weight: bold;
-  text-decoration: none !important;
 }
 
 aside a :hover {
   color: #d4a521 !important;
-  text-decoration: none !important;
+}
+
+aside h1, aside h2 {
+  color: white !important;
+}
+
+.manage-module {
+  color: #d4a521 !important;
 }
 
 /*  Here are where the header styles start */

@@ -10,13 +10,13 @@
 </head>
 
 <!-- Google Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+<style> @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&family=Rowdies:wght@400;700&display=swap'); </style>
 
 <!-- the body section -->
 <body>
 <header>
     <nav>
-        <div> School of Magic </div>
-        <div> My Assignment Management App </div>
+        <div class = "school-name"> School of Magic </div>
+        <div class = "app-name"><a href="index.php"><h2>My Assignment Management App</h2></a></div>
     </nav>
 </header>

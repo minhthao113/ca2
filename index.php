@@ -47,7 +47,7 @@ include('includes/header.php');
 <!-- display a list of modules -->
 <h2>Modules</h2>
 <nav>
-<p><a href="module_list.php">Manage Modules</a></p>
+<p><a class = "manage-module" href="module_list.php">Manage Modules</a></p>
 <hr>
 <ul>
 <?php foreach ($modules as $module) : ?>

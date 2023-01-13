@@ -12,12 +12,12 @@ h2 {
     padding: .25em 0 .5em;
 }
 
-h1, h2 {
-    color: #333;
-}
-
 body {
     color : $font-third-color;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 aside {
@@ -25,11 +25,17 @@ aside {
     a {
         color: $font-secondary-color;
         font-weight: bold;
-        text-decoration: none !important;
         :hover {
             color: $font-primary-color;
-            text-decoration: none !important;
         }
     }
 
+    h1, h2 {
+        color: $font-secondary-color;
+    }
+
+}
+
+.manage-module {
+    color: $font-primary-color;
 }
