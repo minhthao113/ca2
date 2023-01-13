@@ -18,7 +18,7 @@ include('includes/header.php');
               id="add_assignment_form">
 
             <label>Module:</label>
-            <select name="module_id">
+            <select name="module_id" required>
             <?php foreach ($modules as $module) : ?>
                 <option value="<?php echo $module['moduleID']; ?>">
                     <?php echo $module['moduleName']; ?>
@@ -50,10 +50,6 @@ include('includes/header.php');
             <label>Grade (%):</label>
             <input type="input" name="grade">
             <br>
-            
-            <!--<label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
-            <br>-->
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Assignment">
