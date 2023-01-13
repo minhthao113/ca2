@@ -7,10 +7,13 @@ A starter project for DkIT students on the Server-Side module.
 * Configure the database.php file to connect to your SQL database
 ### Changes made in PHP
 * Add and edit collums in all files
-* Change "category" to "module" and "record" to "assignment" to fit the theme
-* Change input types in add_assignment_form and edit_assignment_form
+* Change the theme of the app to "Assignment Management App"
+* Change files names to fit the theme (e.g. "category" to "module"; "record" to "assignment")
+* Add different input types in add_assignment_form and edit_assignment_form (e.g. radio, date)
 * Add "Back to Homepage" button in error page
 ### Changes made in SCSS
 * Install SCSS extensions
-* Add CSS folder
-* Add SCSS files and link them to main mystyle.scss
+* Add CSS folder, SCSS files and link them to main mystyle.scss
+* Copy style from main.css to the scss files
+* Use nesting and variables
+* Link Bootstrap

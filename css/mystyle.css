@@ -1,4 +1,3 @@
-/*  Here are where the variables start */
 /*  Here is where the font styles start */
 h1 {
   font-size: 150%;
@@ -25,7 +24,7 @@ header {
 header h1 {
   margin: 0;
   padding: .5em 0;
-  color: black;
+  color: #df1c1c;
 }
 
 /*  Here are where the navigation bar styles start */
@@ -41,7 +40,7 @@ nav ul li {
 
 /*  Here are where the body styles start */
 body {
-  background-color: #ccc;
+  background-color: #3b0f5f;
 }
 
 .container {
