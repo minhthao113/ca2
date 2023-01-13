@@ -38,7 +38,7 @@ include('includes/header.php');
             <label>Module:</label>
             <select name="module_id">
             <?php foreach ($modules as $module) : ?>
-                <option value="<?php echo $module['moduleID']; ?>">
+                <option value="<?php echo $module['moduleID']; ?>" <?php if($module['moduleID'] == $assignments['moduleID']) echo "selected" ?>>
                     <?php echo $module['moduleName']; ?>
                 </option>
             <?php endforeach; ?>
