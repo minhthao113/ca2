@@ -51,7 +51,7 @@ include('includes/header.php');
             <br> 
             
             <label>Grade (%):</label>
-            <input type="input" name="grade" placeholder="Enter a mark from 1 to 100">
+            <input type="input" name="grade" placeholder="Enter a mark from 1 to 100" required>
             <br>
             
             <label>&nbsp;</label>
