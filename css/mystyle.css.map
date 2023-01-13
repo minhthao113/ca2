@@ -2,7 +2,13 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "mystyle.scss"
+        "mystyle.scss",
+        "_body.scss",
+        "_fonts.scss",
+        "_footer.scss",
+        "_header.scss",
+        "_sidebar.scss",
+        "_variables.scss"
     ],
     "names": [],
     "file": "mystyle.css"
