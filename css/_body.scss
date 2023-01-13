@@ -10,7 +10,7 @@ body {
     width: 100%;
     margin: 0 auto;
     border: none;
-    padding: .5em 2em;
+    padding: 2%;
 }
 
 section {
@@ -20,7 +20,7 @@ section {
 }
 
 hr {
-    color: grey !important;
+    color: $primary-color;
 }
 
 ul {

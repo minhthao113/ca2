@@ -2,12 +2,19 @@
 
 header {
     margin: 0;
-    border-bottom: 2px solid black;
+    background-color: $primary-color;
 
-    h1 {
-        margin: 0;
-        padding: .5em 0;
-        color: rgb(223, 28, 28);
+    .app-name {
+        margin-left: 15px;
+    }
+
+    .school-name {
+        margin-right: 15px;
+        color: $font-primary-color;
     }
     
+    a{
+        color: $font-secondary-color;
+    }
 }
+

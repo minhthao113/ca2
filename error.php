@@ -14,7 +14,6 @@
     <main>
         <h2 class="top">Error</h2>
         <p><?php echo $error; ?></p>
-        <p><a href="index.php">Back to Homepage</a></p>
     </main>
 
     <footer>

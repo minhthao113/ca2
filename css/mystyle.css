@@ -11,12 +11,23 @@ h2 {
   padding: .25em 0 .5em;
 }
 
+h1, h2 {
+  font-family: 'Rowdies', cursive;
+}
+
 body {
-  color: #111111 !important;
+  color: #181a19 !important;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
   text-decoration: none !important;
+  font-weight: bold;
+  color: #243e36 !important;
+}
+
+a:hover {
+  color: #7ca982 !important;
 }
 
 aside a {
@@ -24,8 +35,8 @@ aside a {
   font-weight: bold;
 }
 
-aside a :hover {
-  color: #d4a521 !important;
+aside a:hover {
+  color: #181a19 !important;
 }
 
 aside h1, aside h2 {
@@ -33,19 +44,26 @@ aside h1, aside h2 {
 }
 
 .manage-module {
-  color: #d4a521 !important;
+  color: #7ca982 !important;
 }
 
 /*  Here are where the header styles start */
 header {
   margin: 0;
-  border-bottom: 2px solid black;
+  background-color: #243e36 !important;
 }
 
-header h1 {
-  margin: 0;
-  padding: .5em 0;
-  color: #df1c1c;
+header .app-name {
+  margin-left: 15px;
+}
+
+header .school-name {
+  margin-right: 15px;
+  color: #7ca982 !important;
+}
+
+header a {
+  color: white !important;
 }
 
 /*  Here are where the navigation bar styles start */
@@ -61,7 +79,7 @@ nav ul li {
 
 /*  Here are where the body styles start */
 body {
-  background-color: white !important;
+  background-color: #f1f7ed !important;
   min-height: 100vh;
 }
 
@@ -70,7 +88,7 @@ body {
   width: 100%;
   margin: 0 auto;
   border: none;
-  padding: .5em 2em;
+  padding: 2%;
 }
 
 section {
@@ -80,7 +98,7 @@ section {
 }
 
 hr {
-  color: grey !important;
+  color: #243e36 !important;
 }
 
 ul {
@@ -131,7 +149,13 @@ aside {
   float: left;
   width: 20%;
   height: 100%;
-  background-color: #3b1561 !important;
+  background-color: #7ca982 !important;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+aside .manage-module {
+  color: #243e36 !important;
 }
 
 /*  Here are where the footer styles start */

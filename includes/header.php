@@ -15,8 +15,8 @@
 <!-- the body section -->
 <body>
 <header>
-    <nav>
-        <div class = "school-name"> School of Magic </div>
-        <div class = "app-name"><a href="index.php"><h2>My Assignment Management App</h2></a></div>
+    <nav class = "navbar">
+        <div class = "app-name"><a href="index.php"><h2>My Assignment Management App</h2></a></div>    
+        <div class = "school-name"><h2>School of Magic</h2></div>
     </nav>
 </header>

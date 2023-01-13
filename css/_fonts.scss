@@ -12,12 +12,23 @@ h2 {
     padding: .25em 0 .5em;
 }
 
+h1, h2 {
+    font-family: 'Rowdies', cursive;
+}
+
 body {
     color : $font-third-color;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
     text-decoration: none !important;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+a:hover { 
+    color: $font-primary-color;
 }
 
 aside {
@@ -25,9 +36,11 @@ aside {
     a {
         color: $font-secondary-color;
         font-weight: bold;
-        :hover {
-            color: $font-primary-color;
-        }
+ 
+    }
+
+    a:hover {
+        color: $font-third-color;
     }
 
     h1, h2 {
