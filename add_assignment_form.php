@@ -28,7 +28,7 @@ include('includes/header.php');
             <br>
             
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" required>
             <br>
 
             <label>Note (optional):</label>
