@@ -40,11 +40,11 @@ include('includes/header.php');
             <br>  
 
             <label>Due date:</label>
-            <input type="date" name="due_date">
+            <input type="date" name="due_date" required>
             <br>  
 
             <label>Submit date:</label>
-            <input type="date" name="submit_date">
+            <input type="date" name="submit_date" required>
             <br> 
             
             <label>Grade (%):</label>
