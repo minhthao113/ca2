@@ -37,7 +37,10 @@ include('includes/header.php');
             <br>        
 
             <label>Type:</label>
-            <input type="input" name="type" required>
+            <input type="radio" name="type" value="Recoverable">
+            <label>Recoverable</label>
+            <input type="radio" name="type" value="Non-Recoverable">
+            <label>Non-Recoverable</label>
             <br>  
 
             <label>Due date:</label>
