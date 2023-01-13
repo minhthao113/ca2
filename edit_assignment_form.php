@@ -56,8 +56,10 @@ include('includes/header.php');
             <br>        
 
             <label>Type:</label>
-            <input type="input" name="type"
-                   value="<?php echo $assignments['type']; ?>"> 
+            <input type="radio" name="type" value="Recoverable" <?php if($assignments['type'] == "Recoverable") {echo "checked";} ?>>
+            <label>Recoverable</label>
+            <input type="radio" name="type" value="Non-Recoverable" <?php if($assignments['type'] == "Non-Recoverable") {echo "checked";} ?>>
+            <label>Non-Recoverable</label>  
             <br>  
 
             <label>Due date:</label>
