@@ -1,16 +1,15 @@
 /*  Here are where the body styles start */
 
 body {
-    background-color: $primary-color;
+    background-color: $secondary-color;
+    min-height: 100vh;
 }
 
 .container {
-    /* margin-top: 0; */
     font-family: Arial, Helvetica, sans-serif;
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    background-color: white;
-    border: 1px solid black;
+    border: none;
     padding: .5em 2em;
 }
 
@@ -20,6 +19,9 @@ section {
     padding-bottom: 1.5em;
 }
 
+hr {
+    color: grey !important;
+}
 
 ul {
     margin: 0 0 1em 0;
@@ -31,14 +33,6 @@ li {
     padding: 0;
 }
 
-a {
-    color: rgb(41, 64, 124);
-    font-weight: bold;
-}
-
-a:hover {
-    color: rgb(208, 133, 4);
-}
 
 table {
     border: 1px solid black;

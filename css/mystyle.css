@@ -15,6 +15,21 @@ h1, h2 {
   color: #333;
 }
 
+body {
+  color: #111111 !important;
+}
+
+aside a {
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+aside a :hover {
+  color: #d4a521 !important;
+  text-decoration: none !important;
+}
+
 /*  Here are where the header styles start */
 header {
   margin: 0;
@@ -40,16 +55,15 @@ nav ul li {
 
 /*  Here are where the body styles start */
 body {
-  background-color: #3b0f5f;
+  background-color: white !important;
+  min-height: 100vh;
 }
 
 .container {
-  /* margin-top: 0; */
   font-family: Arial, Helvetica, sans-serif;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  background-color: white;
-  border: 1px solid black;
+  border: none;
   padding: .5em 2em;
 }
 
@@ -57,6 +71,10 @@ section {
   float: left;
   width: 800PX;
   padding-bottom: 1.5em;
+}
+
+hr {
+  color: grey !important;
 }
 
 ul {
@@ -67,15 +85,6 @@ ul {
 li {
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: #29407c;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #d08504;
 }
 
 table {
@@ -114,18 +123,19 @@ br {
 /*  Here are where the side bar styles start */
 aside {
   float: left;
-  width: 150px;
+  width: 20%;
+  height: 100%;
+  background-color: #3b1561 !important;
 }
 
 /*  Here are where the footer styles start */
 footer {
   clear: both;
-  margin-top: 1em;
-  border-top: 2px solid black;
+  margin-top: auto;
 }
 
 footer p {
-  text-align: right;
+  text-align: center;
   font-size: 80%;
   margin: 1em 0;
 }

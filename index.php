@@ -38,20 +38,22 @@ $statement3->execute();
 $assignments = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
-<div class="container">
+
 <?php
 include('includes/header.php');
 ?>
-<h1>Assignment List</h1>
 
 <aside>
 <!-- display a list of modules -->
 <h2>Modules</h2>
 <nav>
+<p><a href="module_list.php">Manage Modules</a></p>
+<hr>
 <ul>
 <?php foreach ($modules as $module) : ?>
 <li><a href=".?module_id=<?php echo $module['moduleID']; ?>">
 <?php echo $module['moduleName']; ?>
+<hr>
 </a>
 </li>
 <?php endforeach; ?>
@@ -59,12 +61,12 @@ include('includes/header.php');
 </nav>          
 </aside>
 
+<div class="container">
 <section>
 <!-- display a table of assignments -->
 <h2><?php echo $module_name; ?></h2>
 <table>
 <tr>
-<!--<th>Image</th>-->
 <th>Name</th>
 <th>Note (optional)</th>
 <th>Type</th>
@@ -74,7 +76,9 @@ include('includes/header.php');
 <th>Delete</th>
 <th>Edit</th>
 </tr>
+
 <?php foreach ($assignments as $assignment) : ?>
+
 <tr>
 <!--<td><img src="image_uploads/<?php echo $assignment['image']; ?>" width="100px" height="100px" /></td>-->
 <td><?php echo $assignment['name']; ?></td>
@@ -83,6 +87,7 @@ include('includes/header.php');
 <td><?php echo $assignment['due_date']; ?></td>
 <td><?php echo $assignment['submit_date']; ?></td>
 <td><?php echo $assignment['grade']; ?></td>
+
 <td><form action="delete_assignment.php" method="post"
 id="delete_assignment_form">
 <input type="hidden" name="assignment_id"
@@ -103,8 +108,8 @@ value="<?php echo $assignment['moduleID']; ?>">
 <?php endforeach; ?>
 </table>
 <p><a href="add_assignment_form.php">Add Assignment</a></p>
-<p><a href="module_list.php">Manage modules</a></p>
 </section>
+
 <?php
 include('includes/footer.php');
 ?>
