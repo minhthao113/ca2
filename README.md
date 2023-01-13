@@ -6,5 +6,6 @@ A starter project for DkIT students on the Server-Side module.
 * Move the PHP files in to your htdocs folder so Apache can process the PHP code
 * Configure the database.php file to connect to your SQL database
 ### Changes made in PHP
-* Change "category" to "module" and "record" to "assignemnt" to fit the theme
-* Change input types in the add and edit form files
+* Add and edit collums in all files
+* Change "category" to "module" and "record" to "assignment" to fit the theme
+* Change input types in add_assignment_form and edit_assignment_form
