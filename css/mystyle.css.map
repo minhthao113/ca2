@@ -3,12 +3,12 @@
     "mappings": "",
     "sources": [
         "mystyle.scss",
-        "_body.scss",
+        "_variables.scss",
         "_fonts.scss",
-        "_footer.scss",
         "_header.scss",
+        "_body.scss",
         "_sidebar.scss",
-        "_variables.scss"
+        "_footer.scss"
     ],
     "names": [],
     "file": "mystyle.css"
