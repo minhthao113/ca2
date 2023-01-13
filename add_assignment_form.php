@@ -18,7 +18,7 @@ include('includes/header.php');
               id="add_assignment_form">
 
             <label>Module:</label>
-            <select name="module_id" required>
+            <select name="module_id">
             <?php foreach ($modules as $module) : ?>
                 <option value="">None</option>
                 <option value="<?php echo $module['moduleID']; ?>">
