@@ -10,3 +10,7 @@ A starter project for DkIT students on the Server-Side module.
 * Change "category" to "module" and "record" to "assignment" to fit the theme
 * Change input types in add_assignment_form and edit_assignment_form
 * Add "Back to Homepage" button in error page
+### Changes made in SCSS
+* Install SCSS extensions
+* Add CSS folder
+* Add SCSS files and link them to main mystyle.scss
